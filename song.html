@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NIHILISM Müzik Çalar</title>
+    <style>
+        .song-item {
+            padding: 10px;
+            cursor: pointer;
+            color: #2c3e50;
+            border-bottom: 1px solid #ecf0f1;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.3s;
+        }
+        .song-item:hover {
+            background: #f8f9fa;
+        }
+        .song-number {
+            width: 30px;
+            color: #7f8c8d;
+        }
+        audio { display: none; }
+        .play-icon::after { content: "▶"; font-size: 0.9em; }
+        .pause-icon::after { content: "⏸"; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <div class="song-list">
+        <!-- Şarkı Listesi -->
+        <div class="song-item" onclick="togglePlay('Genocide')">
+            <span class="song-number">1.</span>
+            <span class="play-icon" id="Genocide-icon"></span>
+            Genocide - Neo_Champion
+        </div>
+        <div class="song-item" onclick="togglePlay('Traitor')">
+            <span class="song-number">2.</span>
+            <span class="play-icon" id="Traitor-icon"></span>
+            Traitor - Torva ✔
+        </div>
+        <div class="song-item" onclick="togglePlay('I_Really_Wish')">
+            <span class="song-number">3.</span>
+            <span class="play-icon" id="I_Really_Wish-icon"></span>
+            I Really Wish I Wasn't Here Right Now - Torva ✔
+        </div>
+	<div class="song-item" onclick="togglePlay('avec')">
+            <span class="song-number">4.</span>
+            <span class="play-icon" id="avec-icon"></span>
+            avec - Torva ✔
+        </div>        
+	<div class="song-item" onclick="togglePlay('imperial')">
+            <span class="song-number">5.</span>
+            <span class="play-icon" id="imperial-icon"></span>
+            IMPERIAL OBLIGATIONS!!! - esquii ✔
+        </div>        
+	<div class="song-item" onclick="togglePlay('whiteout')">
+            <span class="song-number">6.</span>
+            <span class="play-icon" id="whiteout-icon"></span>
+            Whiteout - Neo_Champion
+        </div>        
+	<div class="song-item" onclick="togglePlay('fire')">
+            <span class="song-number">7.</span>
+            <span class="play-icon" id="fire-icon"></span>
+            Friendly Fire - Torva ✔
+        </div>        
+	<div class="song-item" onclick="togglePlay('back')">
+            <span class="song-number">8.</span>
+            <span class="play-icon" id="back-icon"></span>
+            Get Back Here! - Baughy ✔
+        </div>        
+	<div class="song-item" onclick="togglePlay('run')">
+            <span class="song-number">9.</span>
+            <span class="play-icon" id="run-icon"></span>
+            Nowhere to Run. - Baughy
+        </div>        
+	<div class="song-item" onclick="togglePlay('coup')">
+            <span class="song-number">10.</span>
+            <span class="play-icon" id="coup-icon"></span>
+            Coup de Grace - May ✔
+        </div>        
+	<div class="song-item" onclick="togglePlay('loves')">
+            <span class="song-number">11.</span>
+            <span class="play-icon" id="loves-icon"></span>
+            Loves Me Not - Neo Champion
+        </div>        
+	<div class="song-item" onclick="togglePlay('frostbite')">
+            <span class="song-number">12.</span>
+            <span class="play-icon" id="frostbite-icon"></span>
+            Frostbite - Neo_Champion
+        </div>       
+	<div class="song-item" onclick="togglePlay('melancholic')">
+            <span class="song-number">13.</span>
+            <span class="play-icon" id="melancholic-icon"></span>
+            Melancholic - Krajoz ✔
+        </div>        
+	<div class="song-item" onclick="togglePlay('lament')">
+            <span class="song-number">14.</span>
+            <span class="play-icon" id="lament-icon"></span>
+            Fregly's Lament: BDA - Soup]
+        </div>        
+	<div class="song-item" onclick="togglePlay('birds')">
+            <span class="song-number">15.</span>
+            <span class="play-icon" id="birds-icon"></span>
+            Flightless Birds - Juora
+        </div>        
+	<div class="song-item" onclick="togglePlay('even')">
+            <span class="song-number">16.</span>
+            <span class="play-icon" id="even-icon"></span>
+            This Is An Even Greater Homicidal Lunacy Because It Has Lyrics - Amber ✔
+        </div>        
+	<div class="song-item" onclick="togglePlay('evil')">
+            <span class="song-number">17.</span>
+            <span class="play-icon" id="evil-icon"></span>
+            Shop But Evil - Misfire
+        </div>        
+	<div class="song-item" onclick="togglePlay('tough')">
+            <span class="song-number">18.</span>
+            <span class="play-icon" id="tough-icon"></span>
+            Tough Love - esquii ✔
+        </div>        
+	<div class="song-item" onclick="togglePlay('child')">
+            <span class="song-number">19.</span>
+            <span class="play-icon" id="child-icon"></span>
+            Fallen Child - Torva
+        </div>        
+	<div class="song-item" onclick="togglePlay('mariana')">
+            <span class="song-number">20.</span>
+            <span class="play-icon" id="mariana-icon"></span>
+            Mariana's Lament - Neo_Champion
+        </div>        
+	<div class="song-item" onclick="togglePlay('tax')">
+            <span class="song-number">21.</span>
+            <span class="play-icon" id="tax-icon"></span>
+            Tax Fraud - KnuckleDuster ✔
+        </div>        
+	<div class="song-item" onclick="togglePlay('calcium')">
+            <span class="song-number">22.</span>
+            <span class="play-icon" id="calcium-icon"></span>
+            Calcium Crusaders - DonnieTheGuy ✔
+        </div>        
+	<div class="song-item" onclick="togglePlay('defense')">
+            <span class="song-number">23.</span>
+            <span class="play-icon" id="defense-icon"></span>
+            Defense - Zeroh
+        </div>        
+	<div class="song-item" onclick="togglePlay('final')">
+            <span class="song-number">24.</span>
+            <span class="play-icon" id="final-icon"></span>
+            Defense (Finale) - Zeroh
+        </div>        
+	<div class="song-item" onclick="togglePlay('memories')">
+            <span class="song-number">25.</span>
+            <span class="play-icon" id="memories-icon"></span>
+            Memories - Neo_Champion ✔
+        </div>        
+	<div class="song-item" onclick="togglePlay('blackout')">
+            <span class="song-number">26.</span>
+            <span class="play-icon" id="blackout-icon"></span>
+            Blackout - Neo_Champion + Juora ✔
+        </div>
+    </div>
+
+    <!-- Ses Elementleri -->
+    <audio id="Genocide">
+        <source src="https://juuzourem.github.io/NIHILISM/Genocide.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="Traitor">
+        <source src="https://juuzourem.github.io/NIHILISM/Traitor.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="I_Really_Wish">
+        <source src="https://juuzourem.github.io/NIHILISM/I_Really_Wish_I_Wasnt_Here_Right_Now.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="avec">
+        <source src="https://juuzourem.github.io/NIHILISM/avec.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="imperial">
+        <source src="https://juuzourem.github.io/NIHILISM/IMPERIAL_OBLIGATIONS.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="whiteout">
+        <source src="https://juuzourem.github.io/NIHILISM/Whiteout.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="fire">
+        <source src="https://juuzourem.github.io/NIHILISM/Friendly_Fire.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="back">
+        <source src="https://juuzourem.github.io/NIHILISM/Get_Back_Here.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="run">
+        <source src="https://juuzourem.github.io/NIHILISM/Nowhere_to_Run.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="coup">
+        <source src="https://juuzourem.github.io/NIHILISM/Coup_de_Grace.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="loves">
+        <source src="https://juuzourem.github.io/NIHILISM/Loves_Me_Not.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="frostbite">
+        <source src="https://juuzourem.github.io/NIHILISM/Frostbite.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="melancholic">
+        <source src="https://juuzourem.github.io/NIHILISM/Melancholic.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="lament">
+        <source src="https://juuzourem.github.io/NIHILISM/Freglys_Lament_BDA.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="birds">
+        <source src="https://juuzourem.github.io/NIHILISM/Flightless_Birds.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="even">
+        <source src="https://juuzourem.github.io/NIHILISM/This_Is_An_Even_Greater_Homicidal_Lunacy_Because_It_Has_Lyrics.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="evil">
+        <source src="https://juuzourem.github.io/NIHILISM/Shop_But_Evil.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="tough">
+        <source src="https://juuzourem.github.io/NIHILISM/Tough_Love.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="child">
+        <source src="https://juuzourem.github.io/NIHILISM/Fallen_Child.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="mariana">
+        <source src="https://juuzourem.github.io/NIHILISM/Marianas_Lament.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="tax">
+        <source src="https://juuzourem.github.io/NIHILISM/Tax_Fraud.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="calcium">
+        <source src="https://juuzourem.github.io/NIHILISM/Calcium_Crusaders.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="defense">
+        <source src="https://juuzourem.github.io/NIHILISM/Defense.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="final">
+        <source src="https://juuzourem.github.io/NIHILISM/Defense_Finale.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="memories">
+        <source src="https://juuzourem.github.io/NIHILISM/Memories.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="blackout">
+        <source src="https://juuzourem.github.io/NIHILISM/Blackout.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <script>
+        function togglePlay(songId) {
+            const audioElement = document.getElementById(songId);
+            const iconElement = document.getElementById(`${songId}-icon`);
+
+            // Tüm şarkıları durdur
+            document.querySelectorAll('audio').forEach(audio => {
+                if(audio.id !== songId) {
+                    audio.pause();
+                    audio.currentTime = 0;
+                    const otherIcon = document.getElementById(`${audio.id}-icon`);
+                    if(otherIcon) otherIcon.classList.replace('pause-icon', 'play-icon');
+                }
+            });
+
+            if(audioElement.paused) {
+                audioElement.play();
+                iconElement.classList.replace('play-icon', 'pause-icon');
+            } else {
+                audioElement.pause();
+                audioElement.currentTime = 0;
+                iconElement.classList.replace('pause-icon', 'play-icon');
+            }
+        }
+    </script>
+</body>
+</html>
